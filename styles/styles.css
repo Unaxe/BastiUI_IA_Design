@@ -1,0 +1,362 @@
+@font-face {
+  font-family: "clashDisplay";
+  src: url("../assets/fonts/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@keyframes diapo {
+  0% {
+    object-position: 0 0;
+  }
+  50% {
+    object-position: 100% 0;
+  }
+  100% {
+    object-position: 0 0;
+  }
+}
+* {
+  font-family: "clashDisplay";
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, #e2563f 18.72%, #9360ff 62.34%);
+  color: #fff;
+}
+
+.button {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.button:hover {
+  background: #fff;
+  color: #000;
+}
+
+#header {
+  height: 100vh;
+  position: relative;
+}
+#header #hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  object-fit: cover;
+  z-index: -1;
+  mask-image: linear-gradient(180deg, #000000 74%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(180deg, #000000 74%, rgba(0, 0, 0, 0) 100%);
+}
+#header nav {
+  height: 81px;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(26px);
+  -webkit-backdrop-filter: blur(26px);
+  padding: 24px 48px;
+  gap: 48px;
+  box-sizing: border-box;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+#header nav #logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#header nav #logo-container #logo {
+  width: 22px;
+  height: 22px;
+}
+#header nav ul {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+}
+#header nav ul li {
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+#header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+}
+#header nav ul li a:hover {
+  color: #000;
+  border-radius: 999px;
+  background: #fff;
+}
+#header #escape {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chevrons {
+  display: block;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 39.36px;
+}
+
+#services {
+  padding-top: 29px;
+}
+#services .chevrons {
+  z-index: 0;
+}
+#services #presentation-box {
+  margin-top: -179px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#services #presentation-box img {
+  position: relative;
+  top: -33px;
+  z-index: -1;
+}
+#services #presentation-box .text-box {
+  width: 404px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: -85px;
+}
+#services #presentation-box .text-box h2 {
+  width: 313px;
+}
+#services #presentation-box .text-box p {
+  margin-top: 16px;
+}
+#services #presentation-box .text-box .chat-box {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+#services #presentation-box .text-box .chat-box p {
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+#services #presentation-box .text-box .chat-box .clara {
+  border: 1px solid #ffffff;
+  border-radius: 48px;
+  padding: 8px 16px;
+  width: fit-content;
+}
+#services #presentation-box .text-box .chat-box .custommer {
+  border-radius: 48px;
+  padding: 8px 16px;
+  width: fit-content;
+  background: #ffffff;
+  color: #000;
+  margin-left: auto;
+}
+#services #respect {
+  margin-top: 248px;
+}
+#services #respect .texts {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 40%;
+}
+#services #respect h2 {
+  width: 355px;
+}
+#services #respect p {
+  width: 516px;
+  margin-top: 29px;
+}
+#services #respect ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 63px;
+  gap: 48px;
+  width: 633px;
+  list-style: none;
+}
+#services #respect ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+#services #respect ul li img {
+  width: 100px;
+  height: 100px;
+}
+#services #respect ul li p {
+  width: 137px;
+  text-align: center;
+}
+#services #respect .image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.488372093;
+  margin-top: 54px;
+}
+#services #respect .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 33.16%, #000000 57.64%, rgba(0, 0, 0, 0) 100%);
+}
+#services #respect .chevrons {
+  margin-top: -113px;
+}
+
+#destinations {
+  position: relative;
+  height: 640px;
+  overflow: hidden;
+}
+#destinations .texts {
+  margin-left: 10%;
+}
+#destinations .texts h2 {
+  width: 355px;
+}
+#destinations .texts p {
+  width: 372px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+#destinations #diapo {
+  position: absolute;
+  height: 400px;
+  object-fit: none;
+  z-index: -1;
+  top: 44%;
+  transform: translateY(-50%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 48.78%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 48.78%, rgba(0, 0, 0, 0) 100%);
+  object-position: 0 0;
+}
+#destinations #diapo.visible {
+  animation: diapo 20s infinite;
+}
+
+#plans h2 {
+  text-align: center;
+}
+#plans #offers {
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  padding-top: 84px;
+  height: 800px;
+}
+#plans .cards {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 45px;
+  align-items: center;
+  justify-content: center;
+}
+#plans .cards .card {
+  height: 471px;
+  width: 242px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 8px;
+}
+#plans .cards .card img {
+  width: 226px;
+  height: 390px;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  border-radius: 6px;
+}
+#plans .cards .card .infos-container {
+  margin-top: 24px;
+  padding: 16px;
+}
+#plans .cards .card .legend {
+  font-size: 24px;
+}
+#plans .cards .card ul {
+  margin-top: 16px;
+  font-size: 14px;
+  padding-left: 15px;
+}
+#plans .cards .card .price {
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18.45px;
+}
+#plans .cards .card .button {
+  margin-top: 16px;
+}
+#plans .cards .card:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+#plans .cards .card:hover > img {
+  height: 224px;
+}
+#plans #footer {
+  position: relative;
+  width: 100%;
+  height: 1054px;
+  margin-top: -200px;
+}
+#plans #footer .bg {
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: overlay;
+}
+#plans #footer footer {
+  position: absolute;
+  bottom: 39px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+#plans #footer footer .dasagn {
+  color: #fff;
+}
+#plans #footer footer .logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+/*# sourceMappingURL=styles.css.map */

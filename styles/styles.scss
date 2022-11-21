@@ -1,0 +1,452 @@
+// import font form assets/font folder
+// font-face
+@font-face {
+  font-family: "clashDisplay";
+  src: url("../assets/fonts/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes diapo {
+  0% {
+    object-position: 0 0;
+  }
+  50% {
+    object-position: 100% 0;
+  }
+  100% {
+    object-position: 0 0;
+  }
+}
+
+* {
+  font-family: "clashDisplay";
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, #e2563f 18.72%, #9360ff 62.34%);
+  color: #fff;
+}
+
+.button {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+}
+
+#header {
+  height: 100vh;
+  position: relative;
+
+  #hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    object-fit: cover;
+    z-index: -1;
+
+    mask-image: linear-gradient(180deg, #000000 74%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(
+      180deg,
+      #000000 74%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  nav {
+    height: 81px;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(26px);
+    -webkit-backdrop-filter: blur(26px);
+    padding: 24px 48px;
+    gap: 48px;
+    box-sizing: border-box;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+
+    #logo-container {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      #logo {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin-right: 20px;
+
+      li {
+        font-size: 14px;
+        cursor: pointer;
+        padding: 8px 16px;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          padding: 8px 16px;
+
+          &:hover {
+            color: #000;
+            border-radius: 999px;
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  #escape {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.chevrons {
+  display: block;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 39.36px;
+}
+
+#services {
+  padding-top: 29px;
+
+  .chevrons {
+    z-index: 0;
+  }
+
+  #presentation-box {
+    margin-top: -179px;
+    // width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img {
+      position: relative;
+      top: -33px;
+      z-index: -1;
+    }
+
+    .text-box {
+      width: 404px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      right: -85px;
+
+      h2 {
+        width: 313px;
+      }
+
+      p {
+        margin-top: 16px;
+      }
+
+      .chat-box {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+
+        p {
+          margin-top: 8px;
+          margin-bottom: 0px;
+        }
+
+        .clara {
+          border: 1px solid #ffffff;
+          border-radius: 48px;
+          padding: 8px 16px;
+          width: fit-content;
+        }
+
+        .custommer {
+          border-radius: 48px;
+          padding: 8px 16px;
+          width: fit-content;
+          background: #ffffff;
+          color: #000;
+          // place it at the right
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  #respect {
+    margin-top: 248px;
+    .texts {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: 40%;
+    }
+
+    h2 {
+      width: 355px;
+    }
+
+    p {
+      width: 516px;
+      margin-top: 29px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 auto;
+      margin-top: 63px;
+      gap: 48px;
+      width: 633px;
+      list-style: none;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+
+        p {
+          width: 137px;
+          text-align: center;
+        }
+      }
+    }
+
+    .image {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1.48837209302;
+      margin-top: 54px;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        mask-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0)
+        );
+        -webkit-mask-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          #000000 33.16%,
+          #000000 57.64%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+    }
+    .chevrons {
+      margin-top: -113px;
+    }
+  }
+}
+
+#destinations {
+  position: relative;
+  height: 640px;
+  overflow: hidden;
+  .texts {
+    margin-left: 10%;
+
+    h2 {
+      width: 355px;
+    }
+    p {
+      width: 372px;
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+  }
+
+  #diapo {
+    position: absolute;
+    height: 400px;
+    object-fit: none;
+    z-index: -1;
+    top: 44%;
+    transform: translateY(-50%);
+    mask-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      #000000 48.78%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      #000000 48.78%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    object-position: 0 0;
+
+    &.visible {
+      animation: diapo 20s infinite;
+    }
+  }
+}
+
+#plans {
+  h2 {
+    text-align: center;
+  }
+  #offers {
+    background-image: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+      );
+      padding-top: 84px;
+    // margin: 0 auto;
+    height: 800px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 45px;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+      height: 471px;
+      width: 242px;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 8px;
+
+      img {
+        width: 226px;
+        height: 390px;
+        object-fit: cover;
+        transition: all 0.5s ease;
+        border-radius: 6px;
+      }
+
+      .infos-container {
+        margin-top: 24px;
+        padding: 16px;
+      }
+
+      .legend {
+        font-size: 24px;
+      }
+
+      ul {
+        margin-top: 16px;
+        font-size: 14px;
+        padding-left: 15px;
+      }
+
+      .price {
+        margin-top: 16px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18.45px;
+      }
+
+      .button {
+        margin-top: 16px;
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        & > img {
+          // transform: scale(0.8);
+          height: 224px;
+          // make that the image is resized from the width
+        }
+      }
+    }
+  }
+
+  #footer {
+    position: relative;
+    width: 100%;
+    height: 1054px;
+    margin-top: -200px;
+
+    .bg {
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      -webkit-mask-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        #000000 100%
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: overlay;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 39px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10%;
+      box-sizing: border-box;
+      font-size: 12px;
+
+      .dasagn {
+        color: #fff;
+      }
+
+      .logo-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+  }
+}
+
+// Path: styles\styles.scss
+
