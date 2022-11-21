@@ -22,6 +22,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: linear-gradient(180deg, #e2563f 18.72%, #9360ff 62.34%);
   color: #fff;
